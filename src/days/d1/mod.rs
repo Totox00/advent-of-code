@@ -24,8 +24,8 @@ pub fn problem2() -> i32 {
     for line in INPUT.lines() {
         let chrs = line.as_bytes();
 
-        let first = find_first(&chrs);
-        let last = find_last(&chrs);
+        let first = find_first(chrs);
+        let last = find_last(chrs);
 
         sum += first as i32 * 10 + last as i32;
     }
@@ -48,7 +48,7 @@ const NUMS: [&[u8]; 9] = [
 fn find_first(chrs: &[u8]) -> u8 {
     for i in 0..chrs.len() {
         if chrs[i] & 0b11110000 == 0b110000 {
-            return chrs[i] as u8 & 0b1111;
+            return chrs[i] & 0b1111;
         } else if let Some((_, num)) = NUMS
             .iter()
             .zip(1..)
@@ -57,14 +57,13 @@ fn find_first(chrs: &[u8]) -> u8 {
             return num;
         }
     }
-
-    return 0;
+    0
 }
 
 fn find_last(chrs: &[u8]) -> u8 {
     for i in (0..chrs.len()).rev() {
         if chrs[i] & 0b11110000 == 0b110000 {
-            return chrs[i] as u8 & 0b1111;
+            return chrs[i] & 0b1111;
         } else if let Some((_, num)) = NUMS
             .iter()
             .zip(1..)
@@ -73,6 +72,5 @@ fn find_last(chrs: &[u8]) -> u8 {
             return num;
         }
     }
-
-    return 0;
+    0
 }
