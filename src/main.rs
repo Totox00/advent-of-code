@@ -9,4 +9,6 @@ fn main() {
     problem(Problem::Day2Problem2);
     problem(Problem::Day3Problem1);
     problem(Problem::Day3Problem2);
+    problem(Problem::Day4Problem1);
+    problem(Problem::Day4Problem2);
 }

@@ -1,6 +1,7 @@
 mod d1;
 mod d2;
 mod d3;
+mod d4;
 
 pub fn problem(problem: Problem) {
     println!(
@@ -12,6 +13,8 @@ pub fn problem(problem: Problem) {
             Problem::Day2Problem2 => d2::problem2(),
             Problem::Day3Problem1 => d3::problem1(),
             Problem::Day3Problem2 => d3::problem2(),
+            Problem::Day4Problem1 => d4::problem1(),
+            Problem::Day4Problem2 => d4::problem2(),
         }
     )
 }
@@ -23,4 +26,6 @@ pub enum Problem {
     Day2Problem2,
     Day3Problem1,
     Day3Problem2,
+    Day4Problem1,
+    Day4Problem2,
 }
