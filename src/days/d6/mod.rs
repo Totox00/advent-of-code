@@ -12,10 +12,8 @@ pub fn problem1() -> i32 {
             let last = times.last_mut().unwrap();
             *last *= 10;
             *last += (chr & 0b1111) as i32;
-        } else {
-            if *times.last().unwrap() > 0 {
-                times.push(0);
-            }
+        } else if *times.last().unwrap() > 0 {
+            times.push(0);
         }
     }
 
@@ -24,10 +22,8 @@ pub fn problem1() -> i32 {
             let last = distances.last_mut().unwrap();
             *last *= 10;
             *last += (chr & 0b1111) as i32;
-        } else {
-            if *distances.last().unwrap() > 0 {
-                distances.push(0);
-            }
+        } else if *distances.last().unwrap() > 0 {
+            distances.push(0);
         }
     }
 

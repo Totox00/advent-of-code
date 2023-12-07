@@ -4,6 +4,7 @@ mod d3;
 mod d4;
 mod d5;
 mod d6;
+mod d7;
 
 pub fn problem(problem: Problem) {
     match problem {
@@ -19,6 +20,8 @@ pub fn problem(problem: Problem) {
         Problem::Day5Problem2 => println!("{}", d5::problem2()),
         Problem::Day6Problem1 => println!("{}", d6::problem1()),
         Problem::Day6Problem2 => println!("{}", d6::problem2()),
+        Problem::Day7Problem1 => println!("{}", d7::problem1()),
+        Problem::Day7Problem2 => println!("{}", d7::problem2()),
     }
 }
 
@@ -35,4 +38,7 @@ pub enum Problem {
     Day5Problem2,
     Day6Problem1,
     Day6Problem2,
+    Day7Problem1,
+    Day7Problem2,
 }
+

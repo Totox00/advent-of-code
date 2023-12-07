@@ -82,11 +82,9 @@ fn calc_problem(seeds: &[i64], maps: &[Vec<(i64, i64, i64)>]) -> i64 {
     for map in maps {
         for (dest, src, len) in map {
             for (val, has_changed) in &mut state {
-                if !*has_changed {
-                    if *val >= *src && *val < *src + len {
-                        *val += dest - *src;
-                        *has_changed = true;
-                    }
+                if !*has_changed && *val >= *src && *val < *src + len {
+                    *val += dest - *src;
+                    *has_changed = true;
                 }
             }
         }

@@ -35,6 +35,12 @@ fn main() {
     if args().len() > 1 {
         problem(Problem::Day5Problem2);
     }
-    problem(Problem::Day6Problem1);
-    problem(Problem::Day6Problem2);
+    if args().len() > 1 {
+        problem(Problem::Day6Problem1);
+    }
+    if args().len() > 1 {
+        problem(Problem::Day6Problem2);
+    }
+    problem(Problem::Day7Problem1);
+    problem(Problem::Day7Problem2);
 }
